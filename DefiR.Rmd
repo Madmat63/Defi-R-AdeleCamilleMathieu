@@ -312,7 +312,7 @@ head(Clust)
 Deux types de graphique peuvent être générer, un profil d'expression ou une heatmap.
 Le profil d'expression a été créé par Gaelle Lelandais
 
-```{r Graphique Profil, echo=FALSE, message=FALSE, warning=FALSE,fig.keep='last'}
+```{r Graphique Profil, echo=FALSE, fig.keep='last', message=FALSE, warning=FALSE}
 Graphique(Clust,4)
 ```
 <br><br>
@@ -331,7 +331,7 @@ Graphique(Clust,4,MetGraph = "Both")
 
 ## BigOne
 
-```{r Graphique BigOne,fig.keep = 'last'}
+```{r Graphique BigOne, echo=FALSE, fig.keep='last'}
 BigOne(expData,8,MetDist = "correlation",MetClust = "HCL",MetGraph = "heatmap")
 ```
 
@@ -343,7 +343,7 @@ Une version 2 de la fonction BigOne a été réalisé permettant de corriger une
 Un menu s'affiche pour laisser l'utilisateur choisir la correction ou la réaliser lui même
 (La fonction menu() ne permet pas d'être afficher lors de la création d'une sortie HTML)
 
-```{r BigOnev2}
+```{r BigOnev2, eval=FALSE, include=FALSE}
 BigOnev2(expData2,4)
 ```
 
