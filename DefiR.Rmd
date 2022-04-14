@@ -268,7 +268,7 @@ SumNA<-sum(is.na(expData))
         
       library(VIM)
       # imputation grâce la méthode des kNN :
-      #expData<-kNN(expData)
+      expData<-kNN(expData)
       print("TABERNACLE! La matrice est corrigée, la fonction BigOne va débuter.")
       BigOne(expData,N,MetDist="euclidienne",MetClust="kmeans",MetGraph="profil",MetClustHier="ward.D2",ggsave=FALSE)
     }
