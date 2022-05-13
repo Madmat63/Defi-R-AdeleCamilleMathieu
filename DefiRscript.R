@@ -233,7 +233,7 @@ BigOnev2<-function(expData,N,MetDist="euclidienne",MetClust="kmeans",MetGraph="p
   
   if (SumNA>1){
     #la fonction menu() va demander a l'utilisateur si il souhaite corriger sa matrice. L'option graphics va permettre d'aificher une boite de dialoue dans une nouvelle fenetre Windows.
-    Correction<-menu(c("Oui", "Non","La réponse D"), graphics=FALSE,title=paste("NA", "détecté(s) dans la matrice, voulez-vous la corriger ?"))
+    Correction<-menu(c("Oui (Si des lignes comportent >80% de NA, celle-ci seront supprimées)", "Non","La réponse D"), graphics=FALSE,title=paste("NA", "détecté(s) dans la matrice, voulez-vous la corriger ?"))
     if(Correction==1){
       expData80percentNA<-nrow(expData[rowSums((is.na(expData)))/ncol(expData) >= 0.8,])
       if(expData80percentNA>=1){
