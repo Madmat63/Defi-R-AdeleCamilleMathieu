@@ -270,7 +270,7 @@ SumNA<-sum(is.na(expData))
       # imputation grâce la méthode des kNN :
       expData<-kNN(expData)
       print("TABERNACLE! La matrice est corrigée, la fonction BigOne va débuter.")
-      BigOne(expData,N,MetDist="euclidienne",MetClust="kmeans",MetGraph="profil",MetClustHier="ward.D2",ggsave=FALSE)
+      BigOne(expData,N,MetDist=MetDist,MetClust=MetClust,MetGraph=MetGraph,MetClustHier=MetClustHier,ggsave=FALSE)
     }
     else if(Correction==3){
       print("Satané Pancake") 
@@ -279,7 +279,7 @@ SumNA<-sum(is.na(expData))
       print("La matrice doit être corrigé avant de continuer")
     }
   }else{
-    BigOne(expData,N,MetDist="euclidienne",MetClust="kmeans",MetGraph="profil",MetClustHier="ward.D2",ggsave=FALSE)
+    BigOne(expData,N,MetDist=MetDist,MetClust=MetClust,MetGraph=MetGraph,MetClustHier=MetClustHier,ggsave=FALSE)
   }
   
 }
@@ -332,7 +332,7 @@ Graphique(Clust,4,MetGraph = "Both")
 ## BigOne
 
 ```{r Graphique BigOne, echo=FALSE, fig.keep='last'}
-BigOne(expData,8,MetDist = "correlation",MetClust = "HCL",MetGraph = "heatmap")
+BigOne(expData,8,MetDist = "correlation",MetClust = "HCL",MetGraph = "Both")
 ```
 
 <br>
