@@ -247,7 +247,7 @@ BigOnev2<-function(expData,N,MetDist="euclidienne",MetClust="kmeans",MetGraph="p
       # imputation grâce la méthode des kNN :
       expData<-kNN(expData)
       print("TABERNACLE! La matrice est corrigée, la fonction BigOne va débuter.")
-      BigOne(expData,N,MetDist="euclidienne",MetClust="kmeans",MetGraph="profil",MetClustHier="ward.D2",ggsave=FALSE)
+      BigOne(expData,N,MetDist=MetDist,MetClust=MetClust,MetGraph=MetGraph,MetClustHier=MetClustHier,ggsave=FALSE)
     }
     else if(Correction==3){
       print("Satané Pancake") 
@@ -256,7 +256,7 @@ BigOnev2<-function(expData,N,MetDist="euclidienne",MetClust="kmeans",MetGraph="p
       print("La matrice doit être corrigé avant de continuer")
     }
   }else{
-    BigOne(expData,N,MetDist="euclidienne",MetClust="kmeans",MetGraph="profil",MetClustHier="ward.D2",ggsave=FALSE)
+    BigOne(expData,N,MetDist=MetDist,MetClust=MetClust,MetGraph=MetGraph,MetClustHier=MetClustHier,ggsave=FALSE)
   }
   
 }
