@@ -1,15 +1,15 @@
 ---
 title: "DefiR AdèleCamilleMathieu"
 output:
-  pdf_document:
-    toc: yes
   html_document:
     toc: yes
     toc_float: yes
     keep_md: yes
     fig_caption: yes
+  pdf_document:
+    toc: yes
 editor_options:
-  chunk_output_type: console
+  chunk_output_type: inline
 ---
 
 ```{r setup, include=FALSE}
@@ -325,7 +325,7 @@ head(Clust)
 Deux types de graphique peuvent être générer, un profil d'expression ou une heatmap.
 Le profil d'expression a été créé par Gaelle Lelandais
 
-```{r Graphique Profil, echo=FALSE, fig.keep='last', message=FALSE, warning=FALSE}
+```{r Graphique Profil,echo=FALSE, fig.keep='last', message=FALSE, warning=FALSE}
 Graphique(Clust,4)
 ```
 <br><br>
